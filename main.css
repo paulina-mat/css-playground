@@ -11,8 +11,11 @@ body {
     flex-grow: 1;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
 }
 
 .footer {
@@ -30,8 +33,24 @@ body {
 }
 
 .item {
-    width: 400px;
-    height: 400px;
-    background-color: maroon;
     margin: 10px;
+}
+
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
