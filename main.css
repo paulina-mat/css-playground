@@ -7,6 +7,7 @@ body {
 .header {
     background-color: grey;
 }
+
 .main {
     background-color: lightblue;
     flex-grow: 1;
@@ -40,6 +41,11 @@ body {
 img {
     max-width: 100%;
     max-height: auto;
+    opacity: 0.5;
+}
+
+img:hover {
+    opacity: 1;
 }
 
 .button {
@@ -78,7 +84,6 @@ img {
     position: relative;
     display: inline-block;
 }
-
 
 .dropdown-content {
     display: none;
