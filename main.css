@@ -41,11 +41,19 @@ body {
 img {
     max-width: 100%;
     max-height: auto;
-    opacity: 0.5;
+    opacity: 1s;
+    -webkit-transition: -webkit-filter 0.5s;
+    -webkit-filter: contrast(40%);
 }
 
 img:hover {
     opacity: 1;
+    -webkit-filter: contrast(100%);
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1;
 }
 
 .button {
@@ -57,7 +65,7 @@ img:hover {
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
-  }
+}
 
 .button:hover {
     background-color: #000;
