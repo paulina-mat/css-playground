@@ -1,12 +1,13 @@
 body {
     margin: 0;
+    background: rgb(180, 184, 184);
 }
 
 .header {
-    background-color: red;
+    background-color: grey;
 }
 .main {
-    background-color: blue;
+    background-color: lightblue;
     flex-grow: 1;
     display: flex;
     flex-flow: row wrap;
@@ -15,7 +16,7 @@ body {
 }
 
 .footer {
-    background-color: green;
+    background-color: black;
 }
 
 .container {
@@ -31,6 +32,6 @@ body {
 .item {
     width: 400px;
     height: 400px;
-    background-color: teal;
+    background-color: maroon;
     margin: 10px;
 }
