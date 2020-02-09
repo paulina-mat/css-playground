@@ -23,8 +23,8 @@ body {
 .square, .line-x, .start, .triangle-right {
     background-color: black;
     border-left-color: black;
-    animation-duration: 3.0s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .start {
@@ -34,27 +34,27 @@ body {
 }
   
 .line-x {
-    width: 100px;
     height: 2px;
+    animation-duration: 1.0s;
     animation-name: line;
     animation-timing-function: linear;
 }
 
 .square1 {
-    animation-name: square1;
+   animation-delay: 1.5s;
 }
 
 .square2 {
-    animation-name: square2;
+    animation-delay: 2.0s;
 }
 
 .square3 {
-    animation-name: square3;
+    animation-delay: 2.5s;
 }
 
 .square {
-    width: 25px;
-    height: 25px;
+    animation-duration: 0.5s;
+    animation-name: square;
 }
   
 .triangle-right {
@@ -66,35 +66,24 @@ body {
     border-bottom: 5px solid transparent;
     background-color: transparent;
     animation-name: triangle-right;
+    animation-duration: 0.5s;
+    animation-delay: 1.0s;
+    -webkit-transform: scale(0);
 }
 
 @keyframes line {
-    0% { width: 0px; }
-    25% { width: 100px; }
+    from { width: 0px; }
+    to { width: 100px; }
 }
 
-@keyframes square1 {
-    0% { width: 0px; height: 0px; }
-    50% { width: 0px; height: 0px; }
-    61% { width: 25px; height: 25px; }
-}
-
-@keyframes square2 {
-    0% { width: 0px; height: 0px; }
-    61% { width: 0px; height: 0px; }
-    83% { width: 25px; height: 25px; }
-}
-
-@keyframes square3 {
-    0% { width: 0px; height: 0px; }
-    83% { width: 0px; height: 0px; }
-    100% { width: 25px; height: 25px; }
+@keyframes square {
+    from { width: 0px; height: 0px; }
+    to { width: 25px; height: 25px; }
 }
 
 @keyframes triangle-right {
-    0% { -webkit-transform: scale(0); }
-    25% { -webkit-transform: scale(0); }
-    50% { -webkit-transform: scale(1); }
+    from { -webkit-transform: scale(0); }
+    to { -webkit-transform: scale(1); }
 }
 
 .square:hover {
