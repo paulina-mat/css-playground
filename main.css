@@ -21,10 +21,10 @@ body {
 }
 
 .square, .line-x, .start, .triangle-right {
-      background-color: #555;
-      border-left-color: #555;
-      animation-duration: 3.0s;
-      animation-iteration-count: 1;
+    background-color: black;
+    border-left-color: black;
+    animation-duration: 3.0s;
+    animation-iteration-count: 1;
 }
 
 .start {
@@ -116,6 +116,7 @@ body {
     display: flex;
     flex-direction: row-wrap;
     align-items: center;
+    height: 100px;
 }
 
 .container {
