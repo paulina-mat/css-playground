@@ -20,8 +20,67 @@ body {
     max-width: 25%;
 }
 
+.line-y {
+    height: 50px;
+    width: 2px;
+  }
+  
+.line-x {
+    height: 2px;
+    width: 100px;
+    animation-name: line;
+    animation-duration: 4s;
+    -moz-animation-iteration-count: 1;
+}
+
+  .square {
+    height: 25px;
+    width: 25px;
+    animation-name: square;
+    animation-duration: 4s;
+    -moz-animation-iteration-count: 1;
+  }
+  
+  .square, .line-x, .line-y {
+      background-color: #555;
+  }
+
+  @keyframes line {
+    from { width: 0px; }
+    to { width: 100px; }
+  }
+
+  @keyframes square {
+      from { width: 0px; height: 0px; }
+      to { width: 25px; height: 25px; }
+  }
+  .triangle-right {
+      width: 0;
+      height: 0;
+      border-top: 25px solid transparent;
+      border-left: 50px solid #555;
+      border-bottom: 25px solid transparent;
+  }
+
+.square:hover {
+    background-color: maroon;
+    height: 50px;
+    width: 50px;
+}
+
+.square {
+    -webkit-transition-property: background-color, width, height;
+    -webkit-transition-duration: 1.0s;
+}
+
 .footer {
     background-color: black;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row-wrap;
+    align-items: center;
 }
 
 .container {
@@ -49,11 +108,6 @@ img {
 img:hover {
     opacity: 1;
     -webkit-filter: contrast(100%);
-}
-
-.overlay {
-    position: fixed;
-    z-index: 1;
 }
 
 .button {
