@@ -20,30 +20,46 @@ body {
     max-width: 25%;
 }
 
+  .square, .line-x, .line-y, .triangle-right {
+      background-color: #555;
+      border-left-color: #555;
+  }
+
 .line-y {
     height: 50px;
     width: 2px;
   }
   
 .line-x {
-    height: 2px;
     width: 100px;
+    height: 2px;
     animation-name: line;
-    animation-duration: 4s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
     -moz-animation-iteration-count: 1;
 }
 
   .square {
-    height: 25px;
     width: 25px;
+    height: 25px;
     animation-name: square;
     animation-duration: 4s;
     -moz-animation-iteration-count: 1;
   }
   
-  .square, .line-x, .line-y {
-      background-color: #555;
-  }
+  .triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-bottom: 5px solid transparent;
+    background-color: transparent;
+    animation-name: triangle-right;
+    animation-delay: 1.0s;
+    animation-duration: 0.5s;
+    -moz-animation-iteration-count: 1;
+}
 
   @keyframes line {
     from { width: 0px; }
@@ -54,12 +70,10 @@ body {
       from { width: 0px; height: 0px; }
       to { width: 25px; height: 25px; }
   }
-  .triangle-right {
-      width: 0;
-      height: 0;
-      border-top: 25px solid transparent;
-      border-left: 50px solid #555;
-      border-bottom: 25px solid transparent;
+
+  @keyframes triangle-right {
+    from { -webkit-transform: scale(0); }
+    to { -webkit-transform: scale(1); }
   }
 
 .square:hover {
